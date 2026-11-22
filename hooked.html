@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Designed to Hook You | Unplugged</title>
+    <link rel="stylesheet" href="assets/css/style.css">
+  </head>
+  <body>
+    <header class="site-header">
+      <p class="site-name">Unplugged</p>
+      <p class="site-tagline">A student guide to screen time and digital wellbeing</p>
+      <nav aria-label="Main navigation">
+        <ul class="nav-list">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="hooked.html" aria-current="page">Designed to Hook You</a></li>
+          <li><a href="tools.html">Tools Compared</a></li>
+          <li><a href="experiment.html">7-Day Experiment</a></li>
+          <li><a href="glossary.html">Glossary</a></li>
+          <li><a href="references.html">References</a></li>
+        </ul>
+      </nav>
+    </header>
+
+    <main>
+      <h1>Designed to Hook You</h1>
+
+      <section class="intro">
+        <h2>Why it is so hard to put the phone down</h2>
+        <p>Many apps use persuasive design, which means layout and timing choices that make it easy to keep going and hard to stop. Researchers call the most manipulative versions dark patterns, and some of them are built specifically to capture attention (Schaffner et al., 2025). Below are seven common patterns, followed by an explanation of how a push notification actually reaches your phone and where you can switch it off.</p>
+      </section>
+      <section>
+        <h2>Persuasive design patterns</h2>
+        <article class="pattern">
+            <h3>Infinite scroll</h3>
+            <p> Content loads continuously as a person scrolls down, removing natural stopping points found in paginated lists. Designer Aza Raskin created it in 2006 as a more efficient interface and has since criticized how social media companies used it to keep people engaged (NPR, 2026). Researchers describe this loss of stopping cues, the small moments that might remind us to stop, as a key reason why such designs can extend use beyond what people planned (Schaffner et al., 2025).</p>
+        </article>
+         <article class="pattern">
+            <h3>Trigger–action–reward–investment loops</h3>
+            <p>This four-step loop is known as the Hook Model, which Nir Eyal described in his 2014 book <em>Hooked</em> (Eyal, 2014; Fortune, 2017). First, an external cue such as a notification or a badge prompts you to open the app, and one example is an alert that friends have posted new stories (Amplitude, n.d.). Then comes a quick action, a social or content reward, and finally a small investment, such as replying, saving or following, which makes the app more useful and gives you a reason to come back later (Fortune, 2017). Each trip around the loop makes the next trigger more likely to work.</p>
+        </article>
+         <article class="pattern">
+            <h3>Variable rewards and feeds</h3>
+            <p>Unpredictable likes, comments, messages or fresh algorithmic content tap into curiosity and reward-seeking behavior, because you never know whether the next check will be worth it. Psychologists call this a variable reinforcement schedule, and Professor Mark Griffiths says social media is full of such unpredictable rewards that push people to check their screens out of habit (Institute for Healthcare Policy and Innovation, n.d.). Tristan Harris, a former design ethicist at Google, compares pulling down to refresh a feed to pulling a slot machine lever, since you either get something enticing or nothing (Institute for Healthcare Policy and Innovation, n.d.).</p>
+        </article>
+         <article class="pattern">
+            <h3>Ephemeral media ("stories")</h3>
+            <p>Stories are time-limited vertical posts that expire after 24 hours, which creates urgency to check in before the content disappears (Legkauskas &amp; Žilinskaitė, 2024). This matters because fear of missing out, or FOMO, is a strong desire to take part in what other people are currently doing. In a survey of 247 young adults in Lithuania, more intensive Instagram use was linked to a stronger expression of FOMO (Legkauskas &amp; Žilinskaitė, 2024). That is only a correlation, so it does not prove that stories cause FOMO, but it fits the idea that expiring content rewards frequent checking.</p>
+        </article>
+         <article class="pattern">
+            <h3>Push notifications, haptics, and sounds</h3>
+            <p>Alerts, vibrations and chimes pull attention away from other tasks even when the phone is locked or out of sight. In an experiment with 166 college students, people who received a call or text notification during an attention task were more than three times as likely to make mistakes, even though they did not check or answer their phones (Stothart et al., 2015). The researchers found that a simple sound or vibration was enough, and the distraction was comparable to actually using the phone (Stothart et al., 2015). The next section explains how these notifications travel from an app's server to your phone and how you can control them.</p>
+        </article>
+         <article class="pattern">
+            <h3>Microinteractions and frictionless actions</h3>
+            <p>Microinteractions are the tiny moments of an app, such as a quick swipe, an instant reaction or a one-tap control, and designers make them effortless so that repeating them feels natural. Services that earn money from engagement usually remove friction so that users spend as little effort as possible, for example with an endless stream of videos that play automatically (Digital Trends, n.d.). Autoplay is a clear case, since it takes away the need to decide whether to keep watching (Schaffner et al., 2025). Researchers argue that adding small barriers, which they call microboundaries, can interrupt this mindless, automatic behavior (Cox et al., 2016).</p>
+        </article>
+      </section>
+      <section>
+        <h2>How a push notification reaches your phone</h2>
+        <p>A notification feels like it comes straight from the app, but it actually takes a trip through the company's server and a service run by the phone's platform. Along the way, your permissions and settings decide whether it is ever shown to you. The diagram below shows the path, and the text underneath explains each step.</p>
+
+       
+        <figure class="diagram">
+          <figcaption>Figure 1. The path of a push notification from an app's server to your phone. Diagram: [Your name] (2026), own work, based on Apple Developer (n.d.-a) and Firebase (n.d.).</figcaption>
+        </figure>
+
+        <div id="diagram-description" class="diagram-description">
+          <h3>Description of the diagram</h3>
+          <p>The journey starts before any message is sent, when the app asks the phone's operating system to register for push notifications. The platform's push service answers with a unique token that identifies this app on this one phone: Apple calls it a device token, and Firebase calls it a registration token (Apple Developer, n.d.-c; Firebase, n.d.). The app then passes this token to its own server, often called the provider, and the server stores it with your account (Apple Developer, n.d.-c).</p>
+          <p>Later, something happens that the company wants you to know about, such as a new like, a message, or a streak that is about to run out, and the app's server decides to send a notification. The server writes a short message in JSON format, called the payload, and attaches the token so the platform knows which phone should receive it (Apple Developer, n.d.-b). For an iPhone, the server sends this request over a secure connection to the Apple Push Notification service (APNs), which forwards the payload to the device identified by the token (Apple Developer, n.d.-a; Apple Developer, n.d.-b). For an Android phone, the server sends the request to the Firebase Cloud Messaging (FCM) backend, which creates a message ID and hands the message to the platform's transport layer (Firebase, n.d.). FCM can also pass messages on to APNs for Apple devices, so one service can reach both kinds of phone (Firebase, n.d.). If the phone is offline or saving power, delivery can be delayed, and APNs may combine several notifications from the same app (Apple Developer, n.d.-a).</p>
+          <p>When the message reaches the phone, the operating system checks the permissions and settings for that app before anything appears on screen. On iPhone, an app needs your authorization to show alerts, play sounds or put a badge on its icon, and you can change this later in the system settings (Apple Developer, n.d.-d; Apple Developer, n.d.-e). On Android 13 and higher, notifications from a newly installed app are off by default until the app asks and you grant the notification permission (Android Developers, n.d.). If you allow it, the notification can appear as a banner, play a sound and add the red badge count to the app icon, and tapping it opens the app. If you deny it or switch it off later, the app loses these ways of interrupting you, and Android users can even see how many notifications an app sends per day before deciding (Android Developers, n.d.). This makes the permission prompt and the notification settings the main places where you, not the app, are in control, which is why they come up again on the <a href="tools.html">Tools Compared</a> page.</p>
+        </div>
+      </section>
+
+      <section>
+        <h2>From hook to control</h2>
+        <p>None of these patterns is harmful on its own, but together they make the phone very hard to ignore. The good news is that each one has a counter: you can turn off autoplay, mute or deny notifications, remove badges, and limit the apps where you scroll without thinking. You will test some of these changes yourself in the <a href="experiment.html">7-day experiment</a>, and the <a href="references.html">References</a> page lists every source used here.</p>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <p>Unplugged &middot; ISTE-140 Web &amp; Mobile I, Project 2 (Version D) &middot; Lukas Otero &middot; RIT Croatia</p>
+    </footer>
+  </body>
+</html>

@@ -1,7 +1,6 @@
-/* Unplugged - one stylesheet for all six pages.
+/* Unplugged - one stylesheet for all  pages.
 Lukas Otero fro Web and Mobile 1
-   Two font families only: Georgia (headings) and a system sans-serif (body). */
-
+*/
 :root {
   --ink: #1f2933;
   --muted: #52606d;
@@ -130,7 +129,6 @@ li {
   margin-bottom: 0.4rem;
 }
 
-/* ---------- Figures and images ---------- */
 
 img {
   display: block;
@@ -277,9 +275,7 @@ dd {
     font-size: 1.05rem;
   }
 }
-/* ===== Tools Compared: table styles (paste into assets/css/style.css) ===== */
 
-/* Scroll wrapper so the wide table works on phones */
 .table-wrap {
   overflow-x: auto;
   margin: 1.5rem 0;
@@ -317,7 +313,6 @@ dd {
   vertical-align: top;
 }
 
-/* Header row */
 .comparison-table thead th {
   background: #1f2937;
   color: #ffffff;
@@ -327,7 +322,6 @@ dd {
   top: 0;
 }
 
-/* First column: tool names */
 .comparison-table tbody th[scope="row"] {
   background: #f3f5f8;
   font-weight: 700;
@@ -335,7 +329,6 @@ dd {
   border-right: 1px solid #d0d4da;
 }
 
-/* Zebra striping for readability */
 .comparison-table tbody tr:nth-child(even) td {
   background: #fafbfc;
 }
@@ -345,7 +338,6 @@ dd {
   background: #eaf1fb;
 }
 
-/* Column widths */
 .comparison-table th:nth-child(2),
 .comparison-table td:nth-child(2) { min-width: 10rem; }
 .comparison-table th:nth-child(3),
@@ -357,20 +349,17 @@ dd {
 .comparison-table th:nth-child(6),
 .comparison-table td:nth-child(6) { min-width: 14rem; }
 
-/* Rating column */
 .comparison-table td.rating {
   min-width: 9rem;
   font-weight: 600;
 }
 
-/* Small notes under the table / page */
 .table-note {
   margin: 0.75rem 0 1.5rem;
   font-size: 0.85rem;
   color: #4b5563;
 }
 
-/* Mobile tweaks */
 @media (max-width: 600px) {
   .comparison-table {
     font-size: 0.85rem;
@@ -381,7 +370,6 @@ dd {
   }
 }
 
-/* Respect users who prefer printed output */
 @media print {
   .table-wrap {
     overflow: visible;
@@ -396,4 +384,53 @@ dd {
     color: #000000;
     position: static;
   }
+}
+.pattern {
+  margin: 1rem 0;
+  padding: 1rem 1.25rem;
+  border: 1px solid #d0d4da;
+  border-left: 4px solid #1a5fb4;
+  border-radius: 6px;
+  background: #fafbfc;
+}
+
+.pattern h3 {
+  margin-top: 0;
+}
+
+.pattern p:last-child {
+  margin-bottom: 0;
+}
+
+/* Diagram figure */
+.diagram {
+  margin: 1.5rem 0;
+  text-align: center;
+}
+
+.diagram img {
+  max-width: 100%;
+  height: auto;
+  border: 1px solid #d0d4da;
+  border-radius: 6px;
+  background: #ffffff;
+}
+
+.diagram figcaption {
+  margin-top: 0.5rem;
+  font-size: 0.9rem;
+  color: #4b5563;
+  text-align: left;
+}
+
+/* Text description under the diagram */
+.diagram-description {
+  margin-top: 1rem;
+  padding: 1rem 1.25rem;
+  background: #f3f5f8;
+  border-radius: 6px;
+}
+
+.diagram-description h3 {
+  margin-top: 0;
 }
