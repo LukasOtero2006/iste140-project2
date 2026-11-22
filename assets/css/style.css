@@ -402,7 +402,6 @@ dd {
   margin-bottom: 0;
 }
 
-/* Diagram figure */
 .diagram {
   margin: 1.5rem 0;
   text-align: center;
@@ -423,7 +422,6 @@ dd {
   text-align: left;
 }
 
-/* Text description under the diagram */
 .diagram-description {
   margin-top: 1rem;
   padding: 1rem 1.25rem;
@@ -433,4 +431,53 @@ dd {
 
 .diagram-description h3 {
   margin-top: 0;
+}
+
+.data-table {
+  min-width: 46rem;
+  font-size: 0.95rem;
+}
+
+.data-table tbody th[scope="row"] {
+  white-space: nowrap;
+}
+
+.data-table tr.period th {
+  background: var(--accent-dark);
+  color: #ffffff;
+  font-family: var(--font-head);
+  font-size: 1rem;
+}
+
+.data-table tr.avg th,
+.data-table tr.avg td {
+  background: #cfe8e5;
+  font-weight: bold;
+  border-top: 2px solid var(--accent);
+}
+
+.data-table tbody + tbody tr.period th {
+  border-top: 3px solid var(--card);
+}
+
+
+.shots {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(16rem, 1fr));
+  gap: 1rem;
+  margin: 1.5rem 0;
+}
+
+.shots figure {
+  margin: 0;
+}
+
+.shots img {
+  margin: 0 auto;
+  border-radius: 4px;
+  border: 1px solid var(--line);
+}
+
+.reflection p {
+  max-width: 44rem;
 }
